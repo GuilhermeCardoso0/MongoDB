@@ -14,7 +14,7 @@ mongoose.connect(MONGODB_URI)
     .catch(err => console.log( "MongoDB connection error: ", err));
 
 app.listen(PORT, () => {
-    console.log('Server is running on port http://localhost:3000');
+    console.log(`Server is running on port http://localhost${PORT}`);
 });
 
 //Create a new Cliente (Routes)
@@ -65,3 +65,5 @@ app.delete("/clientes/:id", async (req, res) => {
         res.status(500).json({ error: "Error deleting a cliente"});
     }
 });
+
+app.use(express.static('public'));

@@ -5,5 +5,5 @@ const ClienteSchema = new mongoose.Schema({
     email:{type: String, required: true, unique: true}
 });
 
-const Cliente = mongoose.model("Cliente", ClienteSchema);
+const Cliente = mongoose.model('Cliente', ClienteSchema);
 export default Cliente;
