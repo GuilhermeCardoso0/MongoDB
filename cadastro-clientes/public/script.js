@@ -9,14 +9,14 @@ async function carregarClientes() {
     listaClientes.innerHTML = '';
     clientes.forEach(cliente => {
         const li = document.createElement('li');
-        li.textContent = '${cliente.nome} - ${cliente.email}';
+        li.textContent = ` ${cliente.nome} - ${cliente.email} `;
         listaClientes.appendChild(li);
     });
 }
 
 //Add cliente
 
-FormData.addEventListener('submit', async (e) => {
+form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
